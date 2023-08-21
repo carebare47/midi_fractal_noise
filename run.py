@@ -15,7 +15,7 @@ DT = 1.0/50.0
 SHOW_GRAPH = True
 POINTS = 256
 SPAN = 1.0
-SPEED = 0.3
+SPEED = 0.20
 
 midiout = rtmidi.MidiOut()
 # Swap for a string that partially matches your midi device
