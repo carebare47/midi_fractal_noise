@@ -1,3 +1,4 @@
 noise
-python-rtmidi==1.5.5
 pyglet==1.5.27
+python-rtmidi==1.5.5
+rtmidi==2.5.0

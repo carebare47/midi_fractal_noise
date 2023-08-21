@@ -9,7 +9,6 @@ from rtmidi.midiconstants import (ALL_NOTES_OFF, ALL_SOUND_OFF, BALANCE, BANK_SE
                                   NRPN_LSB, NRPN_MSB, PAN, PITCH_BEND, POLY_PRESSURE,
                                   PROGRAM_CHANGE, RESET_ALL_CONTROLLERS, RPN_LSB, RPN_MSB,
                                   SONG_POSITION_POINTER, SONG_SELECT, TIMING_CLOCK)
-from rtmidi.midiutil import open_midioutput
 
 
 def parse_sysex_string(s):
