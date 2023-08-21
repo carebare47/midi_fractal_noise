@@ -1,0 +1,3 @@
+noise
+rtmidi
+pyglet==1.5.27
