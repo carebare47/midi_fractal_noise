@@ -1,8 +1,10 @@
 # midi_fractal_noise
 
-Tested on windows 11
+Quick 1D fractal noise generator for midi CC
+
 
 ## Install
+Tested on windows 11, python 3.10
 ```bash
 pip install -r requirements.txt
 ```
