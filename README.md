@@ -2,13 +2,19 @@
 
 Tested on windows 11
 
-## Print usage and exit
+## Install
+```bash
+pip install -r requirements.txt
+```
+
+## Use
+### Print usage and exit
 ```bash
 C:\Python310\python.exe run.py -h
 ```
 
 
-## List available midi devices
+### List available midi devices
 ```bash
 PS C:\Users\tom_q\Documents\Projects\midi_fractal_noise> C:\Python310\python.exe run.py -l
 Available midi devices:
