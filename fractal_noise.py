@@ -77,7 +77,7 @@ class FractalNoiseGenerator(pyglet.window.Window):
         return self._base
     
     def return_next_point(self):
-        next_point = self.next_point(self._base)
+        next_point = self.next_point(255.0 * self._span / self._points - 0.5 * self._span)
         next_point = self.map_range(next_point)
         return int(next_point)
 

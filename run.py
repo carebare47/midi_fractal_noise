@@ -4,13 +4,13 @@ from fractal_noise import FractalNoiseGenerator
 from midi_coms import MidiOutWrapper
 
 # minilogue_xd midi settings
-MINILOGUE_MIDI_VCF_CUTOFF = 43
-MINILOGUE_MIDI_VCF_MIN = 30
+MINILOGUE_MIDI_VCF_CUTOFF_CC = 43
+MINILOGUE_MIDI_VCF_MIN = 44
 MINILOGUE_MIDI_VCF_MAX = 127
 MINILOGUE_MIDI_CHANNEL = 2
 
 # fractal noise parameters
-OCTAVES = 6
+OCTAVES = 5
 DT = 1.0/50.0
 SHOW_GRAPH = True
 POINTS = 256
@@ -48,7 +48,7 @@ with midiout:
     while True:
         next_value = f.return_next_point()
         f.my_step()
-        midi_wrapper.send_control_change(cc=MINILOGUE_MIDI_VCF_CUTOFF, value=next_value, ch=MINILOGUE_MIDI_CHANNEL)
+        midi_wrapper.send_control_change(cc=MINILOGUE_MIDI_VCF_CUTOFF_CC, value=next_value, ch=MINILOGUE_MIDI_CHANNEL)
         print(f"sent {next_value}")
         time.sleep(DT)
 
