@@ -1,3 +1,4 @@
+import os
 import time
 import rtmidi
 from fractal_noise import FractalNoiseGenerator
@@ -13,7 +14,10 @@ parser.add_argument('--print', '-p', action='store_true', help='Print value sent
 
 args = parser.parse_args()
 list_midi_devices_only = args.list
-midi_port_search_term = 'Focusrite'
+if 'posix' in os.name:
+    midi_port_search_term = 'Claret'
+else:
+    midi_port_search_term = 'Focusrite'
 if args.midi_device:
     midi_port_search_term = args.midi_device
 print_value = args.print
@@ -32,6 +36,10 @@ POINTS = 256
 SPAN = 1.0
 SPEED = 0.20
 
+try:
+    midiout = rtmidi.MidiOut()
+except rtmidi.SystemError as e:
+    pass
 midiout = rtmidi.MidiOut()
 # Swap for a string that partially matches your midi device
 available_ports = midiout.get_ports()
